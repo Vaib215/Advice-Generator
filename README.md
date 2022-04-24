@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click Here](https://your-solution-url.com)
-- Live Site URL: [Click Here](https://your-live-site-url.com)
+- Solution URL: [Click Here](https://github.com/Vaib215/Advice-Generator/)
+- Live Site URL: [Click Here](https://vaib215.github.io/Advice-Generator/)
 
 ## My process
 
