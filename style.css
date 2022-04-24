@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --clr-pri: hsl(218, 23%, 16%);
+    --clr-sec: hsl(217, 19%, 24%);
+    --clr-ter: hsl(217, 19%, 38%);
+    --clr-text: hsl(193, 38%, 86%);
+    --clr-btn: hsl(150, 100%, 66%);
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--clr-pri);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope', sans-serif;
+}
+
+.container {
+    width: 42%;
+    min-height: 50vh;
+    padding: 2em;
+    margin: 2em;
+    background-color: var(--clr-sec);
+    color: var(--clr-text);
+    text-align: center;
+    font-size: 28px;
+    border-radius: 16px;
+}
+
+::selection{
+    color: var(--clr-btn);
+    background-color: var(--clr-pri);
+}
+
+.container .adviceId {
+    font-size: 12px;
+    letter-spacing: 0.75ch;
+    color: var(--clr-btn);
+}
+
+.container .pattern {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.container .advice {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    min-height: 20vh;
+}
+
+.container .next {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: -3em;
+}
+.container .next .cover{
+    border-radius: 100%;
+    padding: 0.75em;
+    display: flex;
+    background-color: var(--clr-btn);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.glow{
+    box-shadow: 0px 0px 30px 0px var(--clr-btn);
+}
+.container .next .cover:hover {
+    transform: scale(0.95)
+}
+.spin {
+    -webkit-animation:spin 0.5s alternate infinite;
+    -moz-animation:spin 0.5s alternate infinite;
+    animation:spin 0.5s alternate infinite;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+@media (max-width:600px){
+    .container {
+        width: 90%;
+        padding: 1em;
+    }
+    .container .next {
+        margin-top: 2em;
+        margin-bottom: -2em;
+    }
+}
